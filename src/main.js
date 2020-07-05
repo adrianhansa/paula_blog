@@ -15,6 +15,14 @@ Vue.config.productionTip = false
 
 let app = null
 
+Vue.filter("preview", (value, size) => {
+  if (value.length > size) {
+    return `${value.substring(0, size)} ...`
+  } else {
+    return value.substring(0, size)
+  }
+})
+
 
 auth.onAuthStateChanged(() => {
   if (!app) {

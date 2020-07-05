@@ -65,9 +65,6 @@ export default {
   },
   mounted() {
     M.Sidenav.init(document.querySelector("#slide-out"), {});
-    // document.addEventListener("DOMContentLoaded", function() {
-    //   M.Sidenav.init(document.querySelector("#slide-out"), {});
-    // });
     auth.onAuthStateChanged(user => {
       if (user) {
         this.user = user;
